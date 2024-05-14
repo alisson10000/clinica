@@ -7,6 +7,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <style>
+            @import'css/raiz.css';
+        </style>
     </head>
     <body>
         <div class="conteudoGeral">
