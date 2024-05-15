@@ -1,6 +1,32 @@
+/* Configurações iniciais para todos os elementos */
 /**{
-    background: red;
-}*/
-.menu a{
-   display: block 
+    /* Define a cor de fundo para todos os elementos
+background: #00BFFF;
+
+    /* Define a cor da fonte para todos os elementos 
+color: #fff;
+} */
+
+/* Estilos para links no menu */
+.menu a {
+    /* Exibe os links como blocos para poder aplicar altura e largura */
+display: block;
+
+    /* Remove sublinhado dos links */
+text-decoration: none;
+
+    /* Adiciona espaçamento em torno dos links para facilitar a seleção */
+padding: 10px;
+
+    /* Cria uma transição suave ao passar o mouse sobre os links */
+transition: all 0.3s ease-in-out;
+
+    /* Define a cor da fonte para os links */
+color: #fff;
+}
+
+/* Estilos ao passar o mouse sobre os links no menu */
+.menu a:hover {
+    /* Muda a cor de fundo dos links ao passar o mouse sobre eles */
+background-color: #039ce0; /* Escolha uma cor de fundo um pouco mais escura para efeito hover */
 }
