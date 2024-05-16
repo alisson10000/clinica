@@ -8,6 +8,10 @@ color: #fff;
 } */
 
 /* Estilos para links no menu */
+
+.menu{
+  
+}
 .menu a {
     /* Exibe os links como blocos para poder aplicar altura e largura */
 display: block;
@@ -23,6 +27,7 @@ transition: all 0.3s ease-in-out;
 
     /* Define a cor da fonte para os links */
 color: #fff;
+width: 200px;
 }
 
 /* Estilos ao passar o mouse sobre os links no menu */

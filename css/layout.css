@@ -1,0 +1,37 @@
+
+            .conteudoGeral {
+                display: grid;
+                grid-template-columns: auto auto; /* ADICIONAR ESSA LINHA */
+                grid-template-rows: auto auto  auto;
+                gap: 2px;
+            }
+
+            .topo {
+                grid-column: span 2;
+                text-align: center;
+                background-color: white; /* Azul escuro */
+            }
+
+            .menu {
+                 grid-column: span 1;
+                text-align: center;
+                width: 200px;
+                background-color: #455a64; /* Azul médio */
+              
+            }
+
+            .pagina {
+                  grid-column: span 1;
+                background-color: #ececec; /* Cinza claro */
+               width: auto;
+               
+            }
+
+            .rodape {
+                grid-column: span 2;
+                background-color: #1d3557; /* Azul escuro */
+            }
+
+
+
+

@@ -7,9 +7,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <style>
-            @import'css/raiz.css';
-        </style>
+       
     </head>
     <body>
         <div class="conteudoGeral">
@@ -44,7 +42,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 ?>
 
             </div>
-            <div class="rodape"></div>
+            <div class="rodape">Projeto de curso Fundec &copy;2024 </div>
         </div>
     </body>
+     <style>
+            @import'css/raiz.css';
+        </style>
 </html>
