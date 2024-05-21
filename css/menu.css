@@ -27,11 +27,13 @@ transition: all 0.3s ease-in-out;
 
     /* Define a cor da fonte para os links */
 color: #fff;
-width: 200px;
+  background-color: #455a64;
+
 }
 
 /* Estilos ao passar o mouse sobre os links no menu */
 .menu a:hover {
     /* Muda a cor de fundo dos links ao passar o mouse sobre eles */
 background-color: #039ce0; /* Escolha uma cor de fundo um pouco mais escura para efeito hover */
+width: 180px;
 }
