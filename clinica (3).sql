@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17/05/2024 às 01:52
+-- Tempo de geração: 22/05/2024 às 01:19
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -62,13 +62,9 @@ CREATE TABLE `medicos` (
 --
 
 INSERT INTO `medicos` (`idMedico`, `nomeMedico`, `crmMedico`, `nascimentoMedico`) VALUES
-(1, 'Antônio', '654659', '1970-05-07'),
-(2, '$nomeMedico', '$crmMedico ', '0000-00-00'),
-(3, 'asdf', 'asdf ', '2024-01-01'),
 (4, 'teste', 'teste ', '2024-05-16'),
 (5, 'teste', 'teste ', '2024-05-16'),
 (6, 'teste', 'teste ', '2024-05-16'),
-(7, 'teste', 'teste ', '2024-05-16'),
 (8, 'teste', 'teste ', '2024-05-16'),
 (9, 'teste', 'teste ', '2024-05-16'),
 (10, 'teste', 'teste ', '2024-05-16'),
@@ -76,7 +72,6 @@ INSERT INTO `medicos` (`idMedico`, `nomeMedico`, `crmMedico`, `nascimentoMedico`
 (12, 'teste', 'teste ', '2024-05-16'),
 (13, 'teste', 'teste ', '2024-05-16'),
 (14, 'qwer', 'qwer ', '2024-05-15'),
-(15, 'aSDFASDF', 'ASDFASDF ', '2024-05-16'),
 (16, 'asdf', 'asdfasf ', '2024-05-16'),
 (17, 'zxcv', 'zxcv ', '2024-05-16'),
 (18, 'sdfg', 'sdfg ', '2024-05-01'),
@@ -84,7 +79,16 @@ INSERT INTO `medicos` (`idMedico`, `nomeMedico`, `crmMedico`, `nascimentoMedico`
 (20, 'teste', 'teste2 ', '2024-05-16'),
 (21, 'testes', 'teste ', '2024-05-16'),
 (22, 'testes', 'testesdfgsdfgdfsg ', '2024-05-16'),
-(23, 'agora', 'agora ', '2024-05-16');
+(23, 'agora', 'agora ', '2024-05-16'),
+(24, '', ' ', '0000-00-00'),
+(25, 'sdgf', '34534 ', '2024-05-22'),
+(26, 'asdfdas', '456456 ', '2024-05-15'),
+(27, 'twerwetewrt', '8768678687676876768 ', '2024-05-01'),
+(28, 'adsf', '1231231 ', '2024-05-08'),
+(29, 'wert', 'werte ', '2024-05-01'),
+(30, 'wert235', '34252 ', '2024-05-01'),
+(31, 'erwtwer', 'wetrwe ', '2024-05-15'),
+(32, 'asf', '4564 ', '2024-05-21');
 
 -- --------------------------------------------------------
 
@@ -99,13 +103,6 @@ CREATE TABLE `medicos_consultam_pacientes` (
   `dataConsulta` date NOT NULL,
   `descricaoConsulta` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Despejando dados para a tabela `medicos_consultam_pacientes`
---
-
-INSERT INTO `medicos_consultam_pacientes` (`idMedicoConsultamPaciente`, `idMedico`, `idPaciente`, `dataConsulta`, `descricaoConsulta`) VALUES
-(1, 1, 1, '2024-05-23', '');
 
 -- --------------------------------------------------------
 
@@ -174,7 +171,7 @@ ALTER TABLE `dependentes`
 -- AUTO_INCREMENT de tabela `medicos`
 --
 ALTER TABLE `medicos`
-  MODIFY `idMedico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idMedico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de tabela `medicos_consultam_pacientes`
