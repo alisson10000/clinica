@@ -8,15 +8,26 @@
 </form>
 
 <?php
+if (isset($_GET['mensagem'])) {
+    $mensagem = $_GET['mensagem'];
+    if ($mensagem == 1) {
+        ?>
+        <div class="ok">Cadastro realizado com sucesso</div>
 
-if(isset($_GET['mensagem'])){
-   echo $mensagem =  $_GET['mensagem'];
-    if($mensagem  == 1){
-        echo 'Cadastro realizado com sucesso';
+        <?php
+    } else if ($mensagem == 2) {
+        ?>
+        <div class="erro">Cadastro não realizado.</div>
+
+
+        <?php
+    } else if ($mensagem == 3) {
+        ?>
+        <div class="alerta">Esse crm já está cadastrado no banco de dados não pode ser duplicado.</div>
+
+
+
+        <?php
     }
-    else if($mensagem  == 2){
-            echo 'Cadastro não realizado.';
-    }
-}else{
-  
 }
+    

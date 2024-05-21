@@ -14,7 +14,9 @@ $result = mysqli_query($conexao, $result);
 $contagemCadastro = mysqli_num_rows($result);
 
 if ($contagemCadastro > 0) {
-    echo 'Esse crm já está cadastrado no banco de dados não pode ser duplicado.';
+    
+     header("Location: http://localhost/clinica/index.php?pagina=2&mensagem=3");
+  
 } else {
 
 
@@ -32,12 +34,12 @@ if ($contagemCadastro > 0) {
     if ($contagemCadastro > 0) {
         
         
-         echo 'Cadastro realizado com sucesso';
+         
         
         
-   //    header("Location: http://localhost/clinica/index.php?pagina=2&mensagem=1");
+      header("Location: http://localhost/clinica/index.php?pagina=2&mensagem=1");
     } else {
-           echo 'Cadastro não realizado!!!!';
+            header("Location: http://localhost/clinica/index.php?pagina=2&mensagem=2");
     }
 }
 
