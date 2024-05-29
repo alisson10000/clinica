@@ -1,19 +1,19 @@
 <?php
 
 require './conexao.php';
-$idMedico = filter_input(INPUT_POST, 'idMedico', FILTER_DEFAULT);
+$idPaciente = filter_input(INPUT_POST, 'idMedico', FILTER_DEFAULT);
 
-$query = "Select * from medicos where idMedico=$idMedico";
+$query = "Select * from medicos where idMedico=$idPaciente";
 
 $query = mysqli_query($conexao, $query);
 
 $contagem = mysqli_num_rows($query);
 
 if ($contagem > 0) {
-    $query = "DELETE FROM medicos WHERE idMedico=$idMedico";
+    $query = "DELETE FROM medicos WHERE idMedico=$idPaciente";
     mysqli_query($conexao, $query);
 
-    $query = "Select * from medicos where idMedico=$idMedico";
+    $query = "Select * from medicos where idMedico=$idPaciente";
 
     $query = mysqli_query($conexao, $query);
 

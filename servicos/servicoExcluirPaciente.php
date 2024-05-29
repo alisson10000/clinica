@@ -1,0 +1,38 @@
+<?php
+
+require './conexao.php';
+$idPaciente = filter_input(INPUT_POST, 'idPaciente', FILTER_DEFAULT);
+
+$query = "Select * from pacientes where idPaciente=$idPaciente";
+
+$query = mysqli_query($conexao, $query);
+
+$contagem = mysqli_num_rows($query);
+
+if ($contagem > 0) {
+    $query = "DELETE FROM pacientes WHERE idPaciente=$idPaciente";
+    mysqli_query($conexao, $query);
+
+    $query = "Select * from pacientes where idPaciente=$idPaciente";
+
+    $query = mysqli_query($conexao, $query);
+
+    $contagem = mysqli_num_rows($query);
+
+    if ($contagem == 0) {
+        header("Location: http://localhost/clinica/index.php?pagina=8&mensagem=1");
+    } else if ($contagem > 0) {
+        header("Location: http://localhost/clinica/index.php?pagina=8&mensagem=2");
+    }
+} else {
+    header("Location: http://localhost/clinica/index.php?pagina=8&mensagem=3");
+}
+ 
+ 
+ 
+
+
+
+
+
+
