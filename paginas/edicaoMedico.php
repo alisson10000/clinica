@@ -1,4 +1,5 @@
-<h1>edição registro médico</h1>
+ <div class="form-container">
+<h2>edição registro médico</h2>
 
 <form  action="http://localhost/clinica/servicos/servicoBuscarMedico.php" method="GET">
 
@@ -10,7 +11,7 @@
 
 </form>
 
-
+ </div>
 <?php
 if (isset($_GET['matriculaMedico']) || isset($_GET['mensagem'])) {
     $mensagem = $_GET['mensagem'];

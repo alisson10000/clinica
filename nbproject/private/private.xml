@@ -4,9 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/clinica/paginas/edicaoMedico.php</file>
+            <file>file:/C:/xampp/htdocs/clinica/servicos/servicoEditarMedico.php</file>
+            <file>file:/C:/xampp/htdocs/clinica/servicos/servicoCadastrarMedico.php</file>
             <file>file:/C:/xampp/htdocs/clinica/servicos/servicoBuscarMedico.php</file>
-            <file>file:/C:/xampp/htdocs/clinica/servicos/servicoExcluirMedico.php</file>
-            <file>file:/C:/xampp/htdocs/clinica/index.php</file>
         </group>
     </open-files>
 </project-private>

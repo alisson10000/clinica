@@ -20,12 +20,12 @@ if ($contagem > 0) {
     $contagem = mysqli_num_rows($query);
 
     if ($contagem == 0) {
-        header("Location: http://localhost/clinica/index.php?pagina=8&mensagem=1");
+        header("Location: http://localhost/clinica/home.php?pagina=8&mensagem=1");
     } else if ($contagem > 0) {
-        header("Location: http://localhost/clinica/index.php?pagina=8&mensagem=2");
+        header("Location: http://localhost/clinica/home.php?pagina=8&mensagem=2");
     }
 } else {
-    header("Location: http://localhost/clinica/index.php?pagina=8&mensagem=3");
+    header("Location: http://localhost/clinica/home.php?pagina=8&mensagem=3");
 }
  
  

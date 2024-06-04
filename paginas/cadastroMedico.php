@@ -1,4 +1,5 @@
-<h1>Cadastro de registro médico</h1>
+ <div class="form-container">
+<h2>Cadastro de registro médico</h2>
 <form method="POST" novalidate="novalidate"
       action="http://localhost/clinica/servicos/servicoCadastrarMedico.php" >
     <input placeholder="Informe o nome do médico" required='' data-val-required="Favor coloque o nome do médico" type="text" name="nomeMedico" id="nomeMedico" >
@@ -6,7 +7,7 @@
     <input   required data-val-required="Favor coloque a data de nascimento do médico"  type="date" name="nascimentoMedico" id="nascimentoMedico" >
     <input type="submit" value="cadastar médico" >
 </form>
-
+ </div>
 <?php
 if (isset($_GET['mensagem'])) {
     $mensagem = $_GET['mensagem'];

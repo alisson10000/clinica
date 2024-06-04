@@ -15,7 +15,7 @@ $contagemCadastro = mysqli_num_rows($result);
 
 if ($contagemCadastro > 0) {
     
-     header("Location: http://localhost/clinica/index.php?pagina=6&mensagem=3");
+     header("Location: http://localhost/clinica/home.php?pagina=6&mensagem=3");
   
 } else {
 
@@ -37,9 +37,9 @@ if ($contagemCadastro > 0) {
          
         
         
-      header("Location: http://localhost/clinica/index.php?pagina=6&mensagem=1");
+      header("Location: http://localhost/clinica/home.php?pagina=6&mensagem=1");
     } else {
-            header("Location: http://localhost/clinica/index.php?pagina=6&mensagem=2");
+            header("Location: http://localhost/clinica/home.php?pagina=6&mensagem=2");
     }
 }
 

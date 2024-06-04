@@ -1,0 +1,72 @@
+/* Estilos para os elementos do formulário */
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #666666; /* Título em azul escuro */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="date"],
+.form-container input[type="submit"],
+.form-container textarea,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+    display: block;
+    
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+    border-color: #0288d1; /* Azul para foco */
+}
+
+.form-container textarea {
+    resize: vertical; /* Permite redimensionamento vertical */
+    min-height: 100px; /* Altura mínima para textarea */
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0288d1; /* Azul para o botão */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form-container button:hover {
+    background-color: #026c9f; /* Azul mais escuro no hover */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-container h2 {
+        font-size: 1.5em;
+    }
+
+    .form-container button {
+        font-size: 14px;
+    }
+}

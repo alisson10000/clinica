@@ -1,39 +1,50 @@
-/* Configurações iniciais para todos os elementos */
-/**{
-    /* Define a cor de fundo para todos os elementos
-background: #00BFFF;
-
-    /* Define a cor da fonte para todos os elementos 
-color: #fff;
-} */
-
 /* Estilos para links no menu */
-
-.menu{
-  
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Menu ocupa toda a largura */
+  background-color: #37474f;
 }
+
 .menu a {
-    /* Exibe os links como blocos para poder aplicar altura e largura */
-display: block;
-
-    /* Remove sublinhado dos links */
-text-decoration: none;
-
-    /* Adiciona espaçamento em torno dos links para facilitar a seleção */
-padding: 10px;
-
-    /* Cria uma transição suave ao passar o mouse sobre os links */
-transition: all 0.3s ease-in-out;
-
-    /* Define a cor da fonte para os links */
-color: #fff;
-  background-color: #455a64;
-
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+  background-color: #37474f;
 }
 
-/* Estilos ao passar o mouse sobre os links no menu */
 .menu a:hover {
-    /* Muda a cor de fundo dos links ao passar o mouse sobre eles */
-background-color: #039ce0; /* Escolha uma cor de fundo um pouco mais escura para efeito hover */
-width: 180px;
+  background-color: #0288d1; /* Azul brilhante para hover */
+}
+
+/* Estilos para dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #455a64; /* Cor diferente para o submenu */
+  flex-direction: column;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  color: #cfd8dc; /* Cor diferente para a fonte dos links do submenu */
+  background-color: #455a64; /* Cor diferente para os links do submenu */
+}
+
+.dropdown-content a:hover {
+  background-color: #0288d1; /* Azul brilhante para hover */
+  color: #ffffff; /* Cor da fonte ao passar o mouse sobre os links do submenu */
+}
+
+/* Exibir o dropdown ao clicar */
+.show {
+  max-height: 500px; /* Ajuste conforme necessário para acomodar todos os links */
 }

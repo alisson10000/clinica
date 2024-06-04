@@ -10,7 +10,7 @@ $nascimentoMedico = filter_input(INPUT_POST, 'nascimentoMedico', FILTER_DEFAULT)
 $query="UPDATE medicos SET nomeMedico='$nomeMedico',`crmMedico`='$crmMedico',`nascimentoMedico`='$nascimentoMedico' WHERE idMedico=$idMedico";
 
 mysqli_query($conexao, $query);
-
+  
 
 
 

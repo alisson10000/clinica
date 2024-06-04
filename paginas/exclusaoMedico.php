@@ -1,11 +1,12 @@
-<h1>exclusão registro médico</h1>
+ <div class="form-container">
+<h2>exclusão registro médico</h2>
 <form action="http://localhost/clinica/servicos/servicoExcluirMedico.php" method="POST">
     
     <input type="text" name="idMedico" id="idMedico" 
            placeholder="Informe a matricula para exclusão " />
     <input type="submit" value="excuir registro medico"/>
  </form>
-
+ </div>
 <?php
 if (isset($_GET['mensagem'])) {
     $mensagem = $_GET['mensagem'];
