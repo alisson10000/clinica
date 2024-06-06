@@ -19,7 +19,20 @@ body {
   background-color: #a3c6fb; /* Cor de fundo mais clara */
   min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da viewport */
 }
+.topoUsuario{
+    width: 100%;
+    background-color: #0288d1;
+    color: white;
+    padding-top: 2px;
+    margin-bottom: 2px;
+}
 
+.topoUsuario a{
+   
+    text-decoration: none;
+    color: white;
+    padding-left: 5%;
+}
 .topo {
   grid-row: 1;
   grid-column: 1 / span 5; /* Ocupa todas as cinco colunas */

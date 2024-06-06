@@ -36,7 +36,7 @@
 .dropdown-content a {
   padding: 10px;
   color: #cfd8dc; /* Cor diferente para a fonte dos links do submenu */
-  background-color: #455a64; /* Cor diferente para os links do submenu */
+  
 }
 
 .dropdown-content a:hover {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22/05/2024 às 01:19
+-- Tempo de geração: 06/06/2024 às 23:19
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -40,9 +40,7 @@ CREATE TABLE `dependentes` (
 --
 
 INSERT INTO `dependentes` (`idDependente`, `idPaciente`, `nomeDependente`, `nascimentoDependente`, `emailDependente`) VALUES
-(2, 1, 'Sudan', '2022-01-26', 's@s'),
-(7, 3, 'Lucas', '2024-05-07', 'l@l'),
-(8, 1, 'Manu', '2008-05-13', 'm@m');
+(7, 3, 'Lucas', '2024-05-07', 'l@l');
 
 -- --------------------------------------------------------
 
@@ -62,7 +60,7 @@ CREATE TABLE `medicos` (
 --
 
 INSERT INTO `medicos` (`idMedico`, `nomeMedico`, `crmMedico`, `nascimentoMedico`) VALUES
-(4, 'teste', 'teste ', '2024-05-16'),
+(4, 'o', 'o', '2024-05-16'),
 (5, 'teste', 'teste ', '2024-05-16'),
 (6, 'teste', 'teste ', '2024-05-16'),
 (8, 'teste', 'teste ', '2024-05-16'),
@@ -88,7 +86,9 @@ INSERT INTO `medicos` (`idMedico`, `nomeMedico`, `crmMedico`, `nascimentoMedico`
 (29, 'wert', 'werte ', '2024-05-01'),
 (30, 'wert235', '34252 ', '2024-05-01'),
 (31, 'erwtwer', 'wetrwe ', '2024-05-15'),
-(32, 'asf', '4564 ', '2024-05-21');
+(32, 'asf', '4564 ', '2024-05-21'),
+(33, 'marcelo', '3245345345 ', '2001-05-21'),
+(34, 'dfgh', 'dfgh ', '2024-06-04');
 
 -- --------------------------------------------------------
 
@@ -122,9 +122,33 @@ CREATE TABLE `pacientes` (
 --
 
 INSERT INTO `pacientes` (`idPaciente`, `nomePaciente`, `nascimentoPaciente`, `emailPaciente`) VALUES
-(1, 'alisson', '2000-01-01', 'a@a'),
-(2, 'Maria', '2005-05-08', 'm@m'),
-(3, 'João', '1999-05-14', 'j@j');
+(3, 'João', '1999-05-14', 'j@j'),
+(4, 'asdf', '2024-05-21', 'asdf'),
+(5, 'asdfadsf', '2024-05-14', 'a@a'),
+(7, '', '0000-00-00', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `idUsuario` int(11) NOT NULL,
+  `nomeUsuario` varchar(100) NOT NULL,
+  `loginUsuario` varchar(100) NOT NULL,
+  `senhaUsuario` varchar(50) NOT NULL,
+  `roleUsuario` enum('ADMINISTRADOR','BASICO','','') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Despejando dados para a tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`idUsuario`, `nomeUsuario`, `loginUsuario`, `senhaUsuario`, `roleUsuario`) VALUES
+(1, 'Alisson Lima De Souza', 'a', 'a', 'ADMINISTRADOR'),
+(7, 'maria', 'b', 'b', 'BASICO'),
+(9, 'eryter', 'c', 'c', 'ADMINISTRADOR');
 
 --
 -- Índices para tabelas despejadas
@@ -158,6 +182,13 @@ ALTER TABLE `pacientes`
   ADD PRIMARY KEY (`idPaciente`);
 
 --
+-- Índices de tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`idUsuario`),
+  ADD UNIQUE KEY `loginUsuario` (`loginUsuario`);
+
+--
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
@@ -171,7 +202,7 @@ ALTER TABLE `dependentes`
 -- AUTO_INCREMENT de tabela `medicos`
 --
 ALTER TABLE `medicos`
-  MODIFY `idMedico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `idMedico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de tabela `medicos_consultam_pacientes`
@@ -183,7 +214,13 @@ ALTER TABLE `medicos_consultam_pacientes`
 -- AUTO_INCREMENT de tabela `pacientes`
 --
 ALTER TABLE `pacientes`
-  MODIFY `idPaciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idPaciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restrições para tabelas despejadas

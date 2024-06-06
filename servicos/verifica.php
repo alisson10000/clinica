@@ -12,8 +12,21 @@ $result = mysqli_query($conexao, $query);
  $contagem = mysqli_num_rows($result);
 $role="";
 while ($row = mysqli_fetch_array($result)) {
+    
+    ?> 
+<div class="topoUsuario">
+
+<?php
+    
+    
   echo "Seja bem vindo ".$row['nomeUsuario']."<a href='servicos/logoff.php'>sair</a>"; 
   $role = $row['roleUsuario'];
+  
+  
+  
+  ?>  
+</div>
+<?php
 }
 
 

@@ -69,6 +69,18 @@
             ?>
 
         </div>
+         <script>
+        // Função para limpar os parâmetros da URL
+        function limparParametrosURL() {
+            var novaURL = window.location.origin + window.location.pathname;
+            window.history.replaceState({}, document.title, novaURL);
+        }
+
+        // Chamando a função para limpar os parâmetros da URL quando a página estiver completamente carregada
+        window.addEventListener('load', function() {
+            limparParametrosURL();
+        });
+    </script>
     </body>
 </html>
 

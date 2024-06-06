@@ -71,13 +71,13 @@ include './servicos/verifica.php';
                             <a href="?pagina=5">Listagem Médico</a>
                         </div>
                     </div>
-                   
-                  
+
+
                     <div class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn">Marcação de Consultas</a>
                         <div class="dropdown-content">
                             <!-- Adicione aqui os links para as funcionalidades de marcação de consultas -->
-                            
+
                             <a href="?pagina=17">Listagem consulta</a>
                         </div>
                     </div>
@@ -96,21 +96,59 @@ include './servicos/verifica.php';
                     // echo $_GET['pagina'];
 
                     if ($_GET['pagina'] == 1) {
+
+
+
+
                         require './paginas/home.php';
                     } elseif ($_GET['pagina'] == 2) {
-                        require './paginas/cadastroMedico.php';
+
+                        if ($role == "ADMINISTRADOR") {
+                            require './paginas/cadastroMedico.php';
+                        } else {
+                            require './paginas/acessoNegado.php';
+                        }
                     } elseif ($_GET['pagina'] == 3) {
-                        require './paginas/edicaoMedico.php';
+
+
+                        if ($role == "ADMINISTRADOR") {
+                            require './paginas/edicaoMedico.php';
+                        } else {
+                            require './paginas/acessoNegado.php';
+                        }
                     } elseif ($_GET['pagina'] == 4) {
-                        require './paginas/exclusaoMedico.php';
+
+
+
+
+                        if ($role == "ADMINISTRADOR") {
+                            require './paginas/exclusaoMedico.php';
+                        } else {
+                            require './paginas/acessoNegado.php';
+                        }
                     } elseif ($_GET['pagina'] == 5) {
                         require './paginas/listagemMedico.php';
                     } elseif ($_GET['pagina'] == 6) {
-                        require './paginas/cadastroPaciente.php';
+
+
+
+                        if ($role == "ADMINISTRADOR") {
+                            require './paginas/cadastroPaciente.php';
+                        } else {
+                            require './paginas/acessoNegado.php';
+                        }
                     } elseif ($_GET['pagina'] == 7) {
-                        require './paginas/edicaoPaciente.php';
+                        if ($role == "ADMINISTRADOR") {
+                            require './paginas/edicaoPaciente.php';
+                        } else {
+                            require './paginas/acessoNegado.php';
+                        }
                     } elseif ($_GET['pagina'] == 8) {
-                        require './paginas/exclusaoPaciente.php';
+                        if ($role == "ADMINISTRADOR") {
+                            require './paginas/exclusaoPaciente.php';
+                        } else {
+                            require './paginas/acessoNegado.php';
+                        }
                     } elseif ($_GET['pagina'] == 9) {
                         require './paginas/listagemPaciente.php';
                     }
@@ -119,5 +157,8 @@ include './servicos/verifica.php';
             </div>
             <div class="rodape">Projeto de curso Fundec &copy;2024</div>
         </div>
+        <script>
+
+        </script>
     </body>
 </html>
