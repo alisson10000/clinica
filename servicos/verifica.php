@@ -14,7 +14,7 @@ $role="";
 while ($row = mysqli_fetch_array($result)) {
     
     ?> 
-<div class="topoUsuario">
+<!--<div class="topoUsuario">
 
 <?php
     
@@ -25,7 +25,7 @@ while ($row = mysqli_fetch_array($result)) {
   
   
   ?>  
-</div>
+</div>-->
 <?php
 }
 

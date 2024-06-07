@@ -152,6 +152,22 @@ include './servicos/verifica.php';
                     } elseif ($_GET['pagina'] == 9) {
                         require './paginas/listagemPaciente.php';
                     }
+                    elseif ($_GET['pagina'] == 10) {
+                         if ($role == "ADMINISTRADOR") {
+                           require './paginas/cadastroDependente.php';
+                        } else {
+                            require './paginas/acessoNegado.php';
+                        }
+                      
+                    }
+                     elseif ($_GET['pagina'] == 11) {
+                         if ($role == "ADMINISTRADOR") {
+                           require './paginas/edicaoDependente.php';
+                        } else {
+                            require './paginas/acessoNegado.php';
+                        }
+                      
+                    }
                 }
                 ?>
             </div>
