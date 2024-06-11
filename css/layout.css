@@ -1,74 +1,87 @@
 /* Configurações iniciais para todos os elementos */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background: #f2f2f2; /* Cor de fundo mais clara */
-  color: #212121; /* Cor do texto padrão mais escura */
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    background: #f2f2f2; /* Cor de fundo mais clara */
+    color: #212121; /* Cor do texto padrão mais escura */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .conteudoGeral {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Cinco colunas */
-  grid-template-rows: auto auto 1fr auto; /* Distribuição das seções */
-  gap: 2px;
-  background-color: #a3c6fb; /* Cor de fundo mais clara */
-  min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da viewport */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Cinco colunas */
+    grid-template-rows: auto auto 1fr auto; /* Distribuição das seções */
+    gap: 2px;
+    background-color: #a3c6fb; /* Cor de fundo mais clara */
+    min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da viewport */
 }
-.topoUsuario{
+
+.topoUsuario {
+    grid-row: 1; /* Ocupa a primeira linha */
+    grid-column: 1 / span 5; /* Ocupa todas as cinco colunas */
     width: 100%;
     background-color: #0288d1;
     color: white;
-    padding-top: 2px;
-    margin-bottom: 2px;
+   
+   
 }
 
-.topoUsuario a{
-   
+.topoUsuario h2 {
+    color: black;
+    font-size: 1em;
+    display: inline;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.topoUsuario a {
     text-decoration: none;
     color: white;
     padding-left: 5%;
+      font-size: 1em;
+    display: inline;
 }
+
 .topo {
-  grid-row: 1;
-  grid-column: 1 / span 5; /* Ocupa todas as cinco colunas */
-  background-color: #a3c6fb; /* Azul do botão de login */
-  color:  #666666; /* Cor do texto branco */
-  font-size: 3em;
-  text-align: center;
-  padding: 10px;
+    grid-row: 2; /* Mudou para a segunda linha */
+    grid-column: 1 / span 5; /* Ocupa todas as cinco colunas */
+    background-color: #a3c6fb; /* Azul do botão de login */
+    color:  #666666; /* Cor do texto branco */
+    font-size: 3em;
+    text-align: center;
+    padding: 10px;
 }
 
 .menu {
-  grid-row: 2;
-  grid-column: 1; /* Começa na primeira coluna */
-  background-color: #a3c6fb; /* Azul do botão de login */
-  padding: 10px;
+    grid-row: 3; /* Mudou para a terceira linha */
+    grid-column: 1; /* Começa na primeira coluna */
+    background-color: #a3c6fb; /* Azul do botão de login */
+    padding: 10px;
 }
 
 .pagina {
-  grid-row: 2;
-  grid-column: 2 / span 4; /* Ocupa quatro colunas a partir da segunda */
-  background-color: #f2f2f2; /* Cor de fundo mais clara */
-  padding: 20px;
+    grid-row: 3; /* Alinhada com a linha do menu */
+    grid-column: 2 / span 4; /* Ocupa quatro colunas a partir da segunda */
+    background-color: #f2f2f2; /* Cor de fundo mais clara */
+    padding: 20px;
 }
 
 .rodape {
-  grid-row: 3;
-  grid-column: 1 / span 5; /* Ocupa todas as cinco colunas */
-  background-color: #a3c6fb; /* Azul do botão de login */
-  color: #666666; /* Cor do texto branco */
-  text-align: center;
-  padding: 10px;
+    grid-row: 4; /* Mudou para a quarta linha */
+    grid-column: 1 / span 5; /* Ocupa todas as cinco colunas */
+    background-color: #a3c6fb; /* Azul do botão de login */
+    color: #666666; /* Cor do texto branco */
+    text-align: center;
+    padding: 10px;
 }
 
 /* Responsividade */
 @media (min-width: 768px) {
-  .conteudoGeral {
-    grid-template-columns: 200px 1fr 1fr 1fr 200px; /* Ajuste as larguras conforme necessário */
-  }
+    .conteudoGeral {
+        grid-template-columns: 200px 1fr 1fr 1fr 200px; /* Ajuste as larguras conforme necessário */
+    }
 }

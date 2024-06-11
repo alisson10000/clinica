@@ -14,6 +14,10 @@ include './servicos/verifica.php';
     </head>
     <body>
         <div class="conteudoGeral">
+            <div class="topoUsuario">
+                <h2>Seja bem vindo <?php echo $usuario;?></h2>
+                <a href='servicos/logoff.php'>sair</a>
+            </div>
             <div class="topo">
                 Sistema de Gerenciamento de Consultas
             </div>
@@ -59,8 +63,6 @@ include './servicos/verifica.php';
                         </div>
                     </div>
                 </div>
-
-
                 <?php
             } elseif ($role == "BASICO") {
                 ?>
@@ -71,56 +73,37 @@ include './servicos/verifica.php';
                             <a href="?pagina=5">Listagem Médico</a>
                         </div>
                     </div>
-
-
                     <div class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn">Marcação de Consultas</a>
                         <div class="dropdown-content">
                             <!-- Adicione aqui os links para as funcionalidades de marcação de consultas -->
-
                             <a href="?pagina=17">Listagem consulta</a>
                         </div>
                     </div>
                 </div>
-
-
-
                 <?php
             }
             ?>
-
-
             <div class="pagina">
                 <?php
                 if (isset($_GET['pagina'])) {
                     // echo $_GET['pagina'];
 
                     if ($_GET['pagina'] == 1) {
-
-
-
-
                         require './paginas/home.php';
                     } elseif ($_GET['pagina'] == 2) {
-
                         if ($role == "ADMINISTRADOR") {
                             require './paginas/cadastroMedico.php';
                         } else {
                             require './paginas/acessoNegado.php';
                         }
                     } elseif ($_GET['pagina'] == 3) {
-
-
                         if ($role == "ADMINISTRADOR") {
                             require './paginas/edicaoMedico.php';
                         } else {
                             require './paginas/acessoNegado.php';
                         }
                     } elseif ($_GET['pagina'] == 4) {
-
-
-
-
                         if ($role == "ADMINISTRADOR") {
                             require './paginas/exclusaoMedico.php';
                         } else {
@@ -129,9 +112,6 @@ include './servicos/verifica.php';
                     } elseif ($_GET['pagina'] == 5) {
                         require './paginas/listagemMedico.php';
                     } elseif ($_GET['pagina'] == 6) {
-
-
-
                         if ($role == "ADMINISTRADOR") {
                             require './paginas/cadastroPaciente.php';
                         } else {
@@ -151,30 +131,23 @@ include './servicos/verifica.php';
                         }
                     } elseif ($_GET['pagina'] == 9) {
                         require './paginas/listagemPaciente.php';
-                    }
-                    elseif ($_GET['pagina'] == 10) {
-                         if ($role == "ADMINISTRADOR") {
-                           require './paginas/cadastroDependente.php';
+                    } elseif ($_GET['pagina'] == 10) {
+                        if ($role == "ADMINISTRADOR") {
+                            require './paginas/cadastroDependente.php';
                         } else {
                             require './paginas/acessoNegado.php';
                         }
-                      
-                    }
-                     elseif ($_GET['pagina'] == 11) {
-                         if ($role == "ADMINISTRADOR") {
-                           require './paginas/edicaoDependente.php';
+                    } elseif ($_GET['pagina'] == 11) {
+                        if ($role == "ADMINISTRADOR") {
+                            require './paginas/edicaoDependente.php';
                         } else {
                             require './paginas/acessoNegado.php';
                         }
-                      
                     }
                 }
                 ?>
             </div>
             <div class="rodape">Projeto de curso Fundec &copy;2024</div>
         </div>
-        <script>
-
-        </script>
     </body>
 </html>

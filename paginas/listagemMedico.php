@@ -5,13 +5,19 @@ $query = "Select * from medicos";
 
 $query = mysqli_query($conexao, $query);
 ?>
-<table border="1">
-    <tr>
-        <td>matricula</td>
-        <td>nome</td>
-        <td>crm</td>
-        <td>nascimento</td>
-    </tr>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>matricula</th>
+            <th>nome</th>
+            <th>crm</th>
+            <th>nascimento</th>
+        </tr>
+    </thead>
+    <tbody>
+
     <?php
     while ($row = mysqli_fetch_array($query)) {
         ?>
@@ -25,8 +31,8 @@ $query = mysqli_query($conexao, $query);
         <?php
     }
     ?>
+         </tbody>
 </table>
-
 
 
 
