@@ -46,8 +46,18 @@ if (isset($_GET['matriculaMedico']) || isset($_GET['mensagem'])) {
         <?php
     }
 }
+if (isset($_GET['mensagem'])) {
+    $mensagem = $_GET['mensagem'];
+    if ($mensagem == 3) {
+        ?>
+        <div class="ok">Edição realizada com sucesso</div>
 
+        <?php
+    } else if ($mensagem == 4) {
+        ?>
+        <div class="erro">Edição não realizada.</div>
+<?php
 
-
-
+}
+}
 

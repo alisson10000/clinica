@@ -1,7 +1,7 @@
 <?php
 
 require './conexao.php';
-$idPaciente = filter_input(INPUT_POST, 'idPaciente', FILTER_DEFAULT);
+$idMedico = filter_input(INPUT_POST, 'idPaciente', FILTER_DEFAULT);
 $nomeDependente = filter_input(INPUT_POST, 'nomeDependente', FILTER_DEFAULT);
 $emailDependente= filter_input(INPUT_POST, 'emailDependente', FILTER_DEFAULT);
 $nascimentoDependente= filter_input(INPUT_POST, 'nascimentoDependente', FILTER_DEFAULT);
@@ -19,7 +19,7 @@ if ($contagemCadastro > 0) {
 } else {
 
 
-    $query = "INSERT INTO dependentes VALUES (null,'$idPaciente','$nomeDependente','$nascimentoDependente','$emailDependente')";
+    $query = "INSERT INTO dependentes VALUES (null,'$idMedico','$nomeDependente','$nascimentoDependente','$emailDependente')";
 
     mysqli_query($conexao, $query);
 
