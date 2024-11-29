@@ -5,7 +5,7 @@ $query = "Select * from medicos";
 
 $query = mysqli_query($conexao, $query);
 ?>
-
+<div class="table-container">
 <table class="table">
 
     <thead>
@@ -34,5 +34,5 @@ $query = mysqli_query($conexao, $query);
          </tbody>
 </table>
 
-
+</div>
 

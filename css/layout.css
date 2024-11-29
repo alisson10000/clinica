@@ -1,6 +1,8 @@
 /* Configurações iniciais para todos os elementos */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -9,15 +11,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
+/* Contêiner geral */
 .conteudoGeral {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Cinco colunas */
     grid-template-rows: auto auto 1fr auto; /* Distribuição das seções */
     gap: 2px;
     background-color: #a3c6fb; /* Cor de fundo mais clara */
-    min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da viewport */
+    min-height: 100vh; /* Garante que ocupa toda a altura da viewport */
+    width: 100vw; /* Ocupa toda a largura da viewport */
+    overflow-x: hidden; /* Evita barra de rolagem horizontal indesejada */
 }
 
 .topoUsuario {
@@ -26,8 +32,6 @@ body {
     width: 100%;
     background-color: #0288d1;
     color: white;
-   
-   
 }
 
 .topoUsuario h2 {
@@ -42,23 +46,23 @@ body {
     text-decoration: none;
     color: white;
     padding-left: 5%;
-      font-size: 1em;
+    font-size: 1em;
     display: inline;
 }
 
 .topo {
-    grid-row: 2; /* Mudou para a segunda linha */
+    grid-row: 2; /* Segunda linha */
     grid-column: 1 / span 5; /* Ocupa todas as cinco colunas */
     background-color: #a3c6fb; /* Azul do botão de login */
-    color:  #666666; /* Cor do texto branco */
+    color: #666666; /* Cor do texto branco */
     font-size: 3em;
     text-align: center;
     padding: 10px;
 }
 
 .menu {
-    grid-row: 3; /* Mudou para a terceira linha */
-    grid-column: 1; /* Começa na primeira coluna */
+    grid-row: 3; /* Terceira linha */
+    grid-column: 1; /* Primeira coluna */
     background-color: #a3c6fb; /* Azul do botão de login */
     padding: 10px;
 }
@@ -71,7 +75,7 @@ body {
 }
 
 .rodape {
-    grid-row: 4; /* Mudou para a quarta linha */
+    grid-row: 4; /* Quarta linha */
     grid-column: 1 / span 5; /* Ocupa todas as cinco colunas */
     background-color: #a3c6fb; /* Azul do botão de login */
     color: #666666; /* Cor do texto branco */

@@ -1,7 +1,19 @@
 /* Estilos para os elementos do formulário */
+.form-container {
+    display: flex; /* Para centralizar conteúdo */
+    flex-direction: column; /* Elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    min-height: 80vh; /* Altura mínima de 100% da viewport */
+    padding: 20px;
+    background-color: #f2f2f2; /* Fundo claro */
+    box-sizing: border-box; /* Inclui padding e border na altura total */
+}
+
 .form-container h2 {
     margin-bottom: 20px;
     color: #666666; /* Título em azul escuro */
+    text-align: center; /* Centraliza o texto */
 }
 
 .form-container label {
@@ -14,7 +26,6 @@
 .form-container input[type="email"],
 .form-container input[type="password"],
 .form-container input[type="date"],
-.form-container input[type="submit"],
 .form-container textarea,
 .form-container select {
     width: 100%;
@@ -23,8 +34,6 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.3s ease-in-out;
-    display: block;
-    
 }
 
 .form-container input[type="text"]:focus,

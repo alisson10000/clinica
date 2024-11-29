@@ -1,3 +1,12 @@
+/* Estilo do contêiner da tabela */
+.table-container {
+  width: 100%; /* Largura total */
+  max-height: 700px; /* Altura máxima com barra de rolagem vertical */
+  overflow-y: auto; /* Barra de rolagem vertical */
+  overflow-x: auto; /* Barra de rolagem horizontal, caso necessário */
+  border: 1px solid #ccc; /* Borda ao redor da tabela */
+}
+
 /* Estilo da tabela */
 .table {
   width: 100%;
@@ -21,7 +30,6 @@
 
 /* Estilo das células de dados da tabela */
 .table td {
- /* // background-color: red; Cor de fundo branca */
   color: #212121; /* Cor do texto padrão mais escura */
 }
 
